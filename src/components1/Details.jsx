@@ -23,7 +23,7 @@ const Details = () =>{
 
     return product ? (
         <div className="w-[70%] h-full flex m-auto py-[10%] ">
-            <img className="object-contain w-[50%]  mr-4" 
+            <img className="object-contain w-[50%]  mr-4 hover:object-fill  " 
             src={`${product.image}`} alt="" />
             <div className="content pt-4 ml-8 w-[40%] h-[70%] ">
                 <h1 className="text-4xl">{product.title}</h1>

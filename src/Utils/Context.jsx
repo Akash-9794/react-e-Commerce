@@ -4,12 +4,12 @@ import React, { createContext, useEffect, useState } from "react";
 export const ProductContext = createContext();
 
 const Context = (props) => {
-    const [products,setproducts] = useState(null);
+    const [products,setProducts] = useState(null);
     
     const getproducts = async () => {
         try{
             const {data} = await axios("/products");
-            setproducts(data);
+            setProducts(data);
         }catch(error){
         console.log(error);
         }
@@ -20,7 +20,7 @@ const Context = (props) => {
     },[]);
     return (
 
-        <ProductContext.Provider value={[products,setproducts]}> 
+        <ProductContext.Provider value={[products,setProducts]}> 
             {props.children}
         </ProductContext.Provider>
     )
